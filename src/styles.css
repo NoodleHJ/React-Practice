@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.list {
+  background-color: lightblue;
+  overflow: auto;
+  height: 200px;
+  width: 300px;
+}
+
+.news {
+  height: 30px;
+  color: black;
+}
