@@ -1,0 +1,53 @@
+body {
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: center;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.btn-danger {
+  color: plum;
+  margin-left: 20px;
+}
+
+.test {
+  background-color: red;
+}
+
+.link {
+  display: block;
+  height: 20px;
+  width: 80px;
+  margin: 20px;
+  text-align: center;
+}
+
+.nav {
+  float: left;
+  width: 20%;
+  margin-bottom: 100px;
+  border: 1px solid orange;
+}
+
+.content {
+  width: 50%;
+  display: block;
+  border: 1px solid pink;
+  overflow: hidden;
+  margin-left: 100px;
+}
+
+.bottom {
+  border: 1px solid blue;
+  margin-top: 100px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}

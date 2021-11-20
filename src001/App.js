@@ -2,7 +2,14 @@ import React from "react";
 import "./styles.css";
 
 export default class App extends React.Component {
-  state = { newArr: [] };
+  state = {
+    newArr: [],
+    isHot: false
+  };
+
+  changeWeather = () => {
+    this.setState({ isHot: !this.state.isHot });
+  };
 
   componentDidMount() {
     console.log("amount");
@@ -28,22 +35,31 @@ export default class App extends React.Component {
     return this.refs.list.scrollHeight;
   }
 
+  shouldComponentUpdate() {
+    console.log("upfate");
+    return true;
+  }
+
   componentDidUpdate(prevProps, prevState, height) {
     this.refs.list.scrollTop += this.refs.list.scrollHeight - height;
   }
 
   render() {
-    console.log("render");
     return (
-      <div className="list" ref="list">
-        {this.state.newArr.map((n, index) => {
-          return (
-            <div key={index} className="news">
-              {n}
-            </div>
-          );
-        })}
-      </div>
+      <>
+        <h1 onClick={this.changeWeather}>
+          Today is {this.state.isHot ? "Sunny" : "Rainy"}
+        </h1>
+        <div className="list" ref="list">
+          {this.state.newArr.map((n, index) => {
+            return (
+              <div key={index} className="news">
+                {n}
+              </div>
+            );
+          })}
+        </div>
+      </>
     );
   }
 }
