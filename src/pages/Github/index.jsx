@@ -19,7 +19,7 @@ export default class Github extends Component {
       <div>
         <Search updateState={this.updateState} />
 
-        <List {...this.state} />
+        <List className="grid-container" {...this.state} />
       </div>
     );
   }
